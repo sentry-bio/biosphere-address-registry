@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://sentry.bio/bar/schemas/transform.v1.json",
+  "title": "BAR Map-to-Form Transform v1",
+  "type": "object",
+  "required": ["record_type", "spec_version", "payload"],
+  "properties": {
+    "record_type": {"const": "transform"},
+    "spec_version": {"const": "bar-1.0"},
+    "content_id": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+    "payload": {
+      "type": "object",
+      "required": [
+        "map_edition_id",
+        "form_id",
+        "input_dim",
+        "backbone_basis",
+        "tangent_mean",
+        "prime_meridian",
+        "chirality_anchor",
+        "inheritance",
+        "certified",
+        "fit_panel_id",
+        "residual_report"
+      ],
+      "properties": {
+        "map_edition_id": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+        "form_id": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+        "input_dim": {"type": "integer", "minimum": 2},
+        "input_coordinate_kind": {"enum": ["poincare-ball", "tangent"]},
+        "backbone_basis": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 2,
+          "items": {"type": "array", "items": {"type": "number"}}
+        },
+        "tangent_mean": {"type": "array", "items": {"type": "number"}},
+        "prime_meridian": {"type": "object"},
+        "chirality_anchor": {"type": "object"},
+        "inheritance": {"enum": ["independent", "warm_start"]},
+        "certified": {"type": "boolean"},
+        "fit_panel_id": {"type": "string"},
+        "residual_report": {"type": "object"}
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}

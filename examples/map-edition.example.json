@@ -1,0 +1,34 @@
+{
+  "content_id": "sha256:a63a0cf253a872740836d1c51cb0d36edc6efbf1730f820008c2d0b94fa2f25f",
+  "payload": {
+    "calibration_ids": [],
+    "embedding_dim": 3,
+    "encoder_id": "sha256:3333333333333333333333333333333333333333333333333333333333333333",
+    "index_tiers": [
+      {
+        "encoder_id": "sha256:3333333333333333333333333333333333333333333333333333333333333333",
+        "genome_count": 2,
+        "index_id": "sha256:4444444444444444444444444444444444444444444444444444444444444444",
+        "index_type": "FlatIP",
+        "name": "1kb",
+        "token_count": 200,
+        "vector_count": 2,
+        "window_bp": 1000
+      }
+    ],
+    "map_id": "atlas-synthetic-v1",
+    "metric_id": "angular-cosine-v1",
+    "reference_manifest_id": "sha256:3f8b0a814a5604abccee4ac7c7296106ee8777caff287968d74bb6fb26daab42",
+    "routing_policy": {
+      "default": "1kb"
+    },
+    "status": "CANDIDATE",
+    "tokenizer_id": "synthetic-tokenizer-v1",
+    "verification": {
+      "self_retrieval": 1.0,
+      "status": "synthetic-pass"
+    }
+  },
+  "record_type": "map-edition",
+  "spec_version": "bar-1.0"
+}

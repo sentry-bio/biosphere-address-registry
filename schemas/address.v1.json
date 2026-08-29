@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://sentry.bio/bar/schemas/address.v1.json",
+  "title": "BAR Registered Address v1",
+  "type": "object",
+  "required": ["record_type", "spec_version", "payload"],
+  "properties": {
+    "record_type": {"const": "address"},
+    "spec_version": {"const": "bar-1.0"},
+    "content_id": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+    "payload": {
+      "type": "object",
+      "required": [
+        "evidence_id",
+        "map_edition_id",
+        "form_id",
+        "transform_id",
+        "theta",
+        "theta_status",
+        "r",
+        "r_status",
+        "radial_proxy",
+        "tags"
+      ],
+      "properties": {
+        "evidence_id": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+        "map_edition_id": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+        "form_id": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+        "transform_id": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+        "theta": {"type": "number"},
+        "theta_status": {"enum": ["candidate", "certified"]},
+        "r": {"type": "number", "minimum": 0},
+        "r_status": {"const": "ADVISORY"},
+        "radial_proxy": {"type": "string", "minLength": 1},
+        "residual": {"type": ["number", "null"], "minimum": 0},
+        "sigma_theta": {"type": ["number", "null"], "minimum": 0},
+        "sigma_r": {"type": ["number", "null"], "minimum": 0},
+        "tags": {
+          "type": "object",
+          "required": ["theta", "r", "kappa", "dim", "residual"]
+        }
+      },
+      "additionalProperties": true
+    },
+    "signatures": {"type": "array"}
+  },
+  "additionalProperties": true
+}

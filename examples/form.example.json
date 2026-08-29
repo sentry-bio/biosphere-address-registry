@@ -1,0 +1,31 @@
+{
+  "content_id": "sha256:e06022b7b5522cb73d1ecd481cf1b7e1ff22a285b9c08ccd02db433313d2448f",
+  "payload": {
+    "advisory_axis": "radius",
+    "certified_axis": "theta",
+    "chirality_anchor": {
+      "accession": "GCF_SYNTHETIC_ARCHAEA.1",
+      "role": "chirality",
+      "sequence_sha256": "sha256:2222222222222222222222222222222222222222222222222222222222222222"
+    },
+    "dim": 2,
+    "dim_status": "CONVENTION",
+    "epsilon": 0.001,
+    "form_version": "triangleccs-1.0",
+    "freeze_gate": {
+      "angular_median_deg_max": 10.0,
+      "determinate_quartet_agreement_min": 0.9
+    },
+    "kappa": 1.25,
+    "kappa_status": "CONVENTION",
+    "origin_semantics": "chart_origin_not_LUCA",
+    "prime_meridian": {
+      "accession": "GCF_SYNTHETIC_ECOLI.1",
+      "role": "prime_meridian",
+      "sequence_sha256": "sha256:1111111111111111111111111111111111111111111111111111111111111111"
+    },
+    "radial_proxy": "ssu+cog+kmer_entropy"
+  },
+  "record_type": "form",
+  "spec_version": "bar-1.0"
+}

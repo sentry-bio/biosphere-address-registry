@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://sentry.bio/bar/schemas/form.v1.json",
+  "title": "BAR TriangleCCS Form v1",
+  "type": "object",
+  "required": ["record_type", "spec_version", "payload"],
+  "properties": {
+    "record_type": {"const": "form"},
+    "spec_version": {"const": "bar-1.0"},
+    "content_id": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+    "payload": {
+      "type": "object",
+      "required": [
+        "form_version",
+        "kappa",
+        "kappa_status",
+        "dim",
+        "dim_status",
+        "epsilon",
+        "prime_meridian",
+        "chirality_anchor",
+        "radial_proxy",
+        "freeze_gate"
+      ],
+      "properties": {
+        "form_version": {"type": "string"},
+        "kappa": {"type": "number", "exclusiveMinimum": 0},
+        "kappa_status": {"const": "CONVENTION"},
+        "dim": {"const": 2},
+        "dim_status": {"const": "CONVENTION"},
+        "epsilon": {"type": "number", "exclusiveMinimum": 0},
+        "prime_meridian": {"type": "object"},
+        "chirality_anchor": {"type": "object"},
+        "radial_proxy": {"type": "string"},
+        "origin_semantics": {"const": "chart_origin_not_LUCA"},
+        "freeze_gate": {
+          "type": "object",
+          "required": ["angular_median_deg_max", "determinate_quartet_agreement_min"]
+        }
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}

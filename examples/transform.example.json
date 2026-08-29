@@ -1,0 +1,46 @@
+{
+  "content_id": "sha256:397835ae732c0fe4462b84c831f2ef1c3c747a17b16f108a5867dd58e9368643",
+  "payload": {
+    "backbone_basis": [
+      [
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0
+      ]
+    ],
+    "certified": false,
+    "chirality_anchor": {
+      "accession": "GCF_SYNTHETIC_ARCHAEA.1",
+      "role": "chirality",
+      "sequence_sha256": "sha256:2222222222222222222222222222222222222222222222222222222222222222"
+    },
+    "fit_panel_id": "synthetic-panel-v1",
+    "form_id": "sha256:e06022b7b5522cb73d1ecd481cf1b7e1ff22a285b9c08ccd02db433313d2448f",
+    "inheritance": "independent",
+    "input_coordinate_kind": "poincare-ball",
+    "input_dim": 3,
+    "map_edition_id": "sha256:a63a0cf253a872740836d1c51cb0d36edc6efbf1730f820008c2d0b94fa2f25f",
+    "prime_meridian": {
+      "accession": "GCF_SYNTHETIC_ECOLI.1",
+      "role": "prime_meridian",
+      "sequence_sha256": "sha256:1111111111111111111111111111111111111111111111111111111111111111"
+    },
+    "residual_report": {
+      "angular_median_deg": null,
+      "determinate_quartet_agreement": null,
+      "status": "synthetic-fixture"
+    },
+    "tangent_mean": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "record_type": "transform",
+  "spec_version": "bar-1.0"
+}

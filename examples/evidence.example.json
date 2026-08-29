@@ -1,0 +1,62 @@
+{
+  "content_id": "sha256:f9b9674cb830874713298f8cff9b0376fd65c0442351642a5ec88dbd5f8914f3",
+  "payload": {
+    "distance_to_manifold": 0.12,
+    "input_quality": "usable",
+    "k": 1,
+    "map_edition_id": "sha256:a63a0cf253a872740836d1c51cb0d36edc6efbf1730f820008c2d0b94fa2f25f",
+    "metric_id": "angular-cosine-v1",
+    "neighborhood": [
+      {
+        "accession": "GCF_SYNTHETIC_ECOLI.1",
+        "distance": 0.05,
+        "gid": 0,
+        "lineage": {
+          "domain": "Bacteria",
+          "genus": "Escherichia"
+        },
+        "reference_content_id": "sha256:1111111111111111111111111111111111111111111111111111111111111111",
+        "similarity": 0.9987502604
+      }
+    ],
+    "observation_id": "sha256:7155b4201eb9308b5ded08cdc40a6f0d21e3171fa11894d4200652a79f7497b1",
+    "rank_readouts": [
+      {
+        "confidence": 0.99,
+        "gap": false,
+        "margin": 0.98,
+        "rank": "domain",
+        "runners_up": [],
+        "support": 0.91,
+        "top": "Bacteria"
+      },
+      {
+        "confidence": 0.88,
+        "gap": false,
+        "margin": 0.77,
+        "rank": "genus",
+        "runners_up": [],
+        "support": 0.91,
+        "top": "Escherichia"
+      },
+      {
+        "confidence": 0.42,
+        "gap": true,
+        "margin": 0.31,
+        "rank": "species",
+        "runners_up": [],
+        "support": 0.91,
+        "top": null
+      }
+    ],
+    "scale": {
+      "tier": "1kb",
+      "window_bp": 1000
+    },
+    "scorer_version": "scorer-v1",
+    "support": 0.91,
+    "typicality": 0.84
+  },
+  "record_type": "evidence",
+  "spec_version": "bar-1.0"
+}

@@ -1,0 +1,18 @@
+{
+  "content_id": "sha256:7155b4201eb9308b5ded08cdc40a6f0d21e3171fa11894d4200652a79f7497b1",
+  "payload": {
+    "accession": "SYNTHETIC_QUERY",
+    "alphabet": "DNA",
+    "assembly_accession": null,
+    "length_bp": 1200,
+    "normalization_policy": "uppercase-strip-whitespace-v1",
+    "quality": {},
+    "sequence_sha256": "sha256:92beefeff4355a4574e9d3e7305ed618d046ec4a8f5dfcac94e216b82c61c400",
+    "source": {
+      "kind": "synthetic-example"
+    },
+    "window_policy": "1kb-prefix-v1"
+  },
+  "record_type": "observation",
+  "spec_version": "bar-1.0"
+}

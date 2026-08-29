@@ -1,0 +1,28 @@
+{
+  "content_id": "sha256:ca6f8ba55fa68360f9d4fbff5197e8fe982f41324f6caae1add71ecf9267e0f7",
+  "payload": {
+    "addresses": [
+      "sha256:7202d9082b5ba325d7927ac37f28180f58936bbf41e4fb2c799fb76d20de1ff8"
+    ],
+    "assembly_accession": "SYNTHETIC_QUERY",
+    "distribution_summary": {
+      "dispersion": 0.0,
+      "n_members": 1,
+      "representative_id": "sha256:7155b4201eb9308b5ded08cdc40a6f0d21e3171fa11894d4200652a79f7497b1",
+      "representative_method": "single-window-fixture"
+    },
+    "evidence": [
+      "sha256:f9b9674cb830874713298f8cff9b0376fd65c0442351642a5ec88dbd5f8914f3"
+    ],
+    "interpretations": [
+      "sha256:b3f46a34fbe695bcd40037809436b44219ff6c36d3e220c594468d9eb3c958b4"
+    ],
+    "level": "genome",
+    "observations": [
+      "sha256:7155b4201eb9308b5ded08cdc40a6f0d21e3171fa11894d4200652a79f7497b1"
+    ],
+    "taxonomy_membership": null
+  },
+  "record_type": "organism-record",
+  "spec_version": "bar-1.0"
+}

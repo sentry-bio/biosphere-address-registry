@@ -1,0 +1,19 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.venv/
+venv/
+build/
+dist/
+.DS_Store
+
+# Runtime registries and biological payloads are not source.
+.bar/
+registry/
+*.fasta
+*.fa
+*.fastq
+*.fq
+*.gz

@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://sentry.bio/bar/schemas/organism-record.v1.json",
+  "title": "BAR Organism Record v1",
+  "type": "object",
+  "required": ["record_type", "spec_version", "payload"],
+  "properties": {
+    "record_type": {"const": "organism-record"},
+    "spec_version": {"const": "bar-1.0"},
+    "content_id": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+    "payload": {
+      "type": "object",
+      "required": ["level", "observations", "evidence", "addresses", "interpretations"],
+      "properties": {
+        "level": {"enum": ["genome", "species"]},
+        "observations": {
+          "type": "array",
+          "items": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"}
+        },
+        "evidence": {
+          "type": "array",
+          "items": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"}
+        },
+        "addresses": {
+          "type": "array",
+          "items": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"}
+        },
+        "interpretations": {
+          "type": "array",
+          "items": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"}
+        },
+        "assembly_accession": {"type": ["string", "null"]},
+        "taxonomy_membership": {"type": ["object", "null"]},
+        "distribution_summary": {
+          "type": "object",
+          "properties": {
+            "representative_method": {"type": "string"},
+            "representative_id": {"type": ["string", "null"]},
+            "n_members": {"type": "integer", "minimum": 0},
+            "dispersion": {"type": ["number", "null"], "minimum": 0},
+            "quantiles": {"type": "object"}
+          },
+          "additionalProperties": true
+        },
+        "supersedes": {"type": "array", "items": {"type": "string"}}
+      },
+      "additionalProperties": true
+    },
+    "signatures": {"type": "array"}
+  },
+  "additionalProperties": true
+}

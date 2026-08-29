@@ -1,0 +1,21 @@
+{
+  "content_id": "sha256:3f8b0a814a5604abccee4ac7c7296106ee8777caff287968d74bb6fb26daab42",
+  "payload": {
+    "entries": [
+      {
+        "accession": "GCF_SYNTHETIC_ECOLI.1",
+        "assembly_sha256": "sha256:1111111111111111111111111111111111111111111111111111111111111111",
+        "gid": 0
+      },
+      {
+        "accession": "GCF_SYNTHETIC_ARCHAEA.1",
+        "assembly_sha256": "sha256:2222222222222222222222222222222222222222222222222222222222222222",
+        "gid": 1
+      }
+    ],
+    "manifest_id": "synthetic-reference-v1",
+    "source_release": "synthetic"
+  },
+  "record_type": "reference-manifest",
+  "spec_version": "bar-1.0"
+}

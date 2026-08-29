@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://sentry.bio/bar/schemas/reference-manifest.v1.json",
+  "title": "BAR Reference Manifest v1",
+  "type": "object",
+  "required": ["record_type", "spec_version", "payload"],
+  "properties": {
+    "record_type": {"const": "reference-manifest"},
+    "spec_version": {"const": "bar-1.0"},
+    "content_id": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+    "payload": {
+      "type": "object",
+      "required": ["manifest_id", "source_release", "entries"],
+      "properties": {
+        "manifest_id": {"type": "string"},
+        "source_release": {"type": "string"},
+        "taxonomy_annotation_id": {"type": ["string", "null"]},
+        "entries": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["gid", "accession"],
+            "properties": {
+              "gid": {"type": "integer", "minimum": 0},
+              "accession": {"type": "string", "minLength": 1},
+              "assembly_sha256": {"type": "string"},
+              "sequence_sha256": {"type": "string"}
+            },
+            "anyOf": [
+              {"required": ["assembly_sha256"]},
+              {"required": ["sequence_sha256"]}
+            ],
+            "additionalProperties": true
+          }
+        }
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}

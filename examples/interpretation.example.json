@@ -1,0 +1,31 @@
+{
+  "content_id": "sha256:b3f46a34fbe695bcd40037809436b44219ff6c36d3e220c594468d9eb3c958b4",
+  "payload": {
+    "evidence_id": "sha256:f9b9674cb830874713298f8cff9b0376fd65c0442351642a5ec88dbd5f8914f3",
+    "ontology": "GTDB",
+    "ontology_release": "synthetic",
+    "operating_point": {
+      "min_confidence": 0.7,
+      "require_nesting": false
+    },
+    "rank_calls": [
+      {
+        "confidence": 0.99,
+        "label": "Bacteria",
+        "rank": "domain"
+      },
+      {
+        "confidence": 0.88,
+        "label": "Escherichia",
+        "rank": "genus"
+      },
+      {
+        "confidence": 0.42,
+        "label": null,
+        "rank": "species"
+      }
+    ]
+  },
+  "record_type": "interpretation",
+  "spec_version": "bar-1.0"
+}

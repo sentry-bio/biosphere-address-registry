@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://sentry.bio/bar/schemas/interpretation.v1.json",
+  "title": "BAR Interpretation v1",
+  "type": "object",
+  "required": ["record_type", "spec_version", "payload"],
+  "properties": {
+    "record_type": {"const": "interpretation"},
+    "spec_version": {"const": "bar-1.0"},
+    "content_id": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+    "payload": {
+      "type": "object",
+      "required": [
+        "evidence_id",
+        "ontology",
+        "ontology_release",
+        "operating_point",
+        "rank_calls"
+      ],
+      "properties": {
+        "evidence_id": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+        "ontology": {"type": "string"},
+        "ontology_release": {"type": "string"},
+        "operating_point": {"type": "object"},
+        "rank_calls": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["rank", "label"],
+            "properties": {
+              "rank": {"type": "string"},
+              "label": {"type": ["string", "null"]},
+              "confidence": {"type": ["number", "null"]}
+            },
+            "additionalProperties": true
+          }
+        }
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}

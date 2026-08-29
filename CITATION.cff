@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "If you use BAR records or the reference implementation, cite this repository."
+title: "Biosphere Address Registry"
+type: software
+version: 0.1.0
+date-released: 2026-08-29
+authors:
+  - family-names: Fenn
+    given-names: Rohit
+  - family-names: Fenn
+    given-names: Amit
+repository-code: "https://github.com/sentry-bio/biosphere-address-registry"
+license: MIT

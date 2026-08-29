@@ -1,0 +1,24 @@
+{
+  "content_id": "sha256:7202d9082b5ba325d7927ac37f28180f58936bbf41e4fb2c799fb76d20de1ff8",
+  "payload": {
+    "evidence_id": "sha256:f9b9674cb830874713298f8cff9b0376fd65c0442351642a5ec88dbd5f8914f3",
+    "form_id": "sha256:e06022b7b5522cb73d1ecd481cf1b7e1ff22a285b9c08ccd02db433313d2448f",
+    "map_edition_id": "sha256:a63a0cf253a872740836d1c51cb0d36edc6efbf1730f820008c2d0b94fa2f25f",
+    "r": 0.45707764140622964,
+    "r_status": "ADVISORY",
+    "radial_proxy": "ssu+cog+kmer_entropy",
+    "residual": 0.08,
+    "tags": {
+      "dim": "CONVENTION",
+      "kappa": "CONVENTION",
+      "r": "ADVISORY",
+      "residual": "INSTRUMENT",
+      "theta": "CANDIDATE"
+    },
+    "theta": 0.46364760900080615,
+    "theta_status": "candidate",
+    "transform_id": "sha256:397835ae732c0fe4462b84c831f2ef1c3c747a17b16f108a5867dd58e9368643"
+  },
+  "record_type": "address",
+  "spec_version": "bar-1.0"
+}

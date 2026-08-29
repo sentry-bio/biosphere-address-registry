@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://sentry.bio/bar/schemas/evidence.v1.json",
+  "title": "BAR Evidence v1",
+  "type": "object",
+  "required": ["record_type", "spec_version", "payload"],
+  "properties": {
+    "record_type": {"const": "evidence"},
+    "spec_version": {"const": "bar-1.0"},
+    "content_id": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+    "payload": {
+      "type": "object",
+      "required": [
+        "observation_id",
+        "map_edition_id",
+        "metric_id",
+        "k",
+        "neighborhood",
+        "support",
+        "input_quality",
+        "rank_readouts",
+        "scorer_version"
+      ],
+      "properties": {
+        "observation_id": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+        "map_edition_id": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+        "metric_id": {"type": "string", "minLength": 1},
+        "k": {"type": "integer", "minimum": 1},
+        "neighborhood": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["gid", "accession", "distance"],
+            "properties": {
+              "gid": {"type": "integer", "minimum": 0},
+              "accession": {"type": "string", "minLength": 1},
+              "reference_content_id": {"type": "string"},
+              "distance": {"type": "number", "minimum": 0},
+              "similarity": {"type": "number"},
+              "lineage": {"type": "object"}
+            },
+            "additionalProperties": true
+          }
+        },
+        "support": {"type": "number"},
+        "input_quality": {"type": "string"},
+        "typicality": {"type": ["number", "null"]},
+        "distance_to_manifold": {"type": ["number", "null"]},
+        "rank_readouts": {"type": "array"},
+        "scorer_version": {"type": "string"},
+        "scale": {"type": "object"},
+        "latency_ms": {"type": "number", "minimum": 0}
+      },
+      "additionalProperties": true
+    },
+    "signatures": {"type": "array"}
+  },
+  "additionalProperties": true
+}
